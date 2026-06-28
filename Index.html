@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tarannum Mujawar | Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* navbar ki height ke hisab se */
+}
+
+.navbar-brand{
+    color: #6A11CB !important;
+}
+
+.nav-link{
+    color: #444 !important;
+    font-weight: 600;
+}
+
+.nav-link:hover{
+    color: #FF4D9D !important;
+}
+
+    .profile-box{
+    filter:drop-shadow(0 0 20px #ff69b4)
+           drop-shadow(0 0 40px #8a2be2)
+           drop-shadow(0 0 60px #00c6ff);
+}
+
+
+    /* Profile Image Design */
+
+.hero img{
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    transition:all 0.5s ease;
+    cursor:pointer;
+}
+
+.hero img{
+    border-radius:50%;
+    padding:8px;
+    background:linear-gradient(45deg,#ff69b4,#8a2be2,#00c6ff);
+    animation:rotateBorder 4s linear infinite;
+}
+
+@keyframes rotateBorder{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+/* Hover Effect */
+
+.hero img:hover{
+    transform:scale(1.1) rotate(5deg);
+    border-color:#ff69b4;
+    box-shadow:
+        0 0 20px #ff69b4,
+        0 0 40px #8a2be2,
+        0 0 60px #c084fc;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+.hero img{
+    animation:float 4s ease-in-out infinite;
+}
+    /* Attractive Card Hover Effect */
+
+.card,
+.glass {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover,
+.glass:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+    border: 2px solid #c084fc;
+}
+
+/* Project Image */
+
+.project-card img{
+    width: 100%;
+    height: 180px;       /* Image height */
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.project-card:hover img{
+    transform: scale(1.1);
+}
+
+/* Button Hover */
+.btn {
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+}
+
+/* Certificate Icon Hover */
+.certificate-icon {
+    font-size: 50px;
+    transition: all 0.5s ease;
+}
+
+.certificate-card:hover .certificate-icon {
+    transform: rotate(360deg) scale(1.2);
+    color: #8a2be2;
+}
+
+/* Skills Progress Hover */
+.progress:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+}
+
+/* Navbar Hover */
+.nav-link {
+    position: relative;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #ff69b4 !important;
+}
+
+/* Profile Image Hover */
+.hero img {
+    transition: all 0.5s ease;
+    border-radius: 50%;
+}
+
+.hero img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255,105,180,0.6);
+}
+
+/* Section Title Hover */
+.title:hover,
+.section-title:hover {
+    color: #8a2be2;
+    letter-spacing: 2px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9ad5,#e7b6ff,#b784ff);
+background-attachment:fixed;
+}
+
+#google_translate_element {
+    margin-left: 15px;
+}
+
+.goog-te-gadget {
+    font-size: 0 !important;
+}
+
+
+
+.goog-te-gadget select:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(138,43,226,0.4);
+}
+
+
+/* NAVBAR */
+
+.navbar{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+}
+
+.navbar-brand,
+.nav-link{
+color:black !important;
+font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero img{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.5);
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:700;
+}
+
+.hero span{
+color:white;
+}
+
+/* SECTION */
+
+section{
+padding:80px 0;
+}
+
+.title{
+text-align:center;
+font-size:2.5rem;
+font-weight:bold;
+color:white;
+margin-bottom:50px;
+}
+
+.title::after{
+content:'';
+display:block;
+width:90px;
+height:4px;
+background:white;
+margin:10px auto;
+border-radius:20px;
+}
+
+/* GLASS CARD */
+
+.glass{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:30px;
+color:white;
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+/* SKILLS */
+
+.skill{
+margin-bottom:20px;
+}
+
+.progress{
+height:10px;
+border-radius:20px;
+}
+
+/* PROJECTS */
+
+.project-card{
+transition:.4s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+/* BUTTON */
+
+.btn-custom{
+background:white;
+color:#a100ff;
+font-weight:600;
+border-radius:30px;
+padding:10px 25px;
+}
+
+.btn-custom:hover{
+background:#fff3a0;
+}
+
+/* CONTACT */
+
+.contact-icon{
+font-size:1.8rem;
+margin-right:10px;
+}
+
+/* FOOTER */
+
+footer{
+padding:20px;
+text-align:center;
+color:white;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+}
+
+/* ===========================
+   LARGE WHATSAPP BUTTON
+=========================== */
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:25px;
+    left:25px;
+    width:80px;
+    height:80px;
+    background:linear-gradient(135deg,#25D366,#00ff88);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    text-decoration:none;
+    z-index:9999;
+    animation:whatsappPulse 2s infinite;
+    box-shadow:
+    0 0 20px #25D366,
+    0 0 40px #25D366,
+    0 0 60px rgba(37,211,102,.8);
+    transition:0.5s;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.2) rotate(10deg);
+    box-shadow:
+    0 0 30px #25D366,
+    0 0 60px #25D366,
+    0 0 90px #25D366;
+}
+
+@keyframes whatsappPulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+#scrollBtn{
+    position:fixed;
+    right:25px;
+    bottom:30px;
+    width:80px;
+    height:80px;
+    border:none;
+    border-radius:50%;
+    z-index:9999;
+    cursor:pointer;
+
+
+
+    color:white;
+    font-size:38px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    0 0 20px #ff69b4,
+    0 0 40px #8a2be2;
+
+    animation:floatArrow 3s ease-in-out infinite;
+    transition:0.4s;
+}
+
+#scrollBtn:hover{
+    transform:scale(1.15);
+    box-shadow:
+    0 0 30px #ff69b4,
+    0 0 60px #8a2be2,
+    0 0 90px #c084fc;
+}
+
+@keyframes floatArrow{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+/* Animation */
+.hidden{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 1s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.achievement-card{
+    border:none;
+    border-radius:25px;
+    transition:.5s;
+    backdrop-filter:blur(12px);
+}
+
+.achievement-card:hover{
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:
+    0 0 25px #ff69b4,
+    0 0 50px #8a2be2;
+}
+
+.achievement-icon{
+    font-size:60px;
+    color:#8a2be2;
+    transition:.5s;
+}
+
+.achievement-card:hover .achievement-icon{
+    transform:rotate(360deg) scale(1.2);
+    color:#ff69b4;
+}
+
+.achievement-card h4{
+    color:#6a11cb;
+    font-weight:bold;
+}
+
+.achievement-card p{
+    color:#555;
+}
+/* ===== TM Logo ===== */
+
+.tm-logo{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#8B5CF6,#A855F7);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+    font-family:Arial, sans-serif;
+    letter-spacing:2px;
+    box-shadow:0 0 12px rgba(168,85,247,.4);
+    transition:.4s ease;
+}
+
+.tm-logo:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(168,85,247,.8);
+}
+
+.logo{
+    text-decoration:none;
+
+}
+.tm-logo{
+    margin-right: 15px;
+}
+
+/* Statistics Section */
+
+#stats{
+    padding:80px 10%;
+    text-align:center;
+    background:none;
+}
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:30px;
+    backdrop-filter:blur(12px);
+    transition:.4s;
+    box-shadow:0 0 20px rgba(168,85,247,.15);
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(168,85,247,.5);
+}
+
+
+
+.stat-card p{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:500;
+}
+
+.section-title{
+    color:white;
+    font-size:36px;
+}
+#stats .section-title{
+    background: transparent !important;
+    background-image: none !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+
+
+/* All Sections Except Home */
+
+#about,
+#skills,
+#education,
+#projects,
+#certifications,
+#achievements,
+#resume,
+#contact,
+#stats{
+    background: #F8F5FF;
+    color: #333;
+    padding: 80px 0;
+}
+
+#scrollBtn{
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background: linear-gradient(135deg,#6A11CB,#FF4D9D);
+
+    color: white;
+    font-size: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 20px #ff69b4,
+        0 0 40px #8a2be2;
+
+    animation: floatArrow 3s ease-in-out infinite;
+    transition: .4s;
+}
+.btn-outline-light{
+    border:2px solid white;
+    color:white;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-outline-light:hover{
+    background:white;
+    color:#6A11CB;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(255,255,255,.4);
+}
+.btn-custom,
+.btn-outline-light{
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.btn-outline-light{
+    border:2px solid #fff;
+    color:#fff;
+    background:transparent;
+}
+
+.btn-outline-light:hover{
+    background:#fff;
+    color:#6A11CB;
+}
+.hero h1 span{
+    background: linear-gradient(
+        90deg,
+        #ff69b4,
+        #8a2be2,
+        #00c6ff,
+        #ff69b4
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientMove 4s linear infinite;
+    font-weight: 800;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    100%{
+        background-position:100% 50%;
+    }
+}
+
+.hidden{
+    opacity:0;
+    transition:all 1s ease;
+}
+
+/* Left se slide */
+.slide-left{
+    transform:translateX(-100px);
+}
+
+/* Right se slide */
+.slide-right{
+    transform:translateX(100px);
+}
+
+/* Jab show ho */
+.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+#skills .container{
+    margin-top: -80px;
+}
+
+.timeline{
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline::after{
+    content: "";
+    position: absolute;
+    width: 4px;
+    background: #6A11CB;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item{
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline-item.left{
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right{
+    left: 50%;
+}
+
+.timeline-content{
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    transition: .4s;
+}
+
+.timeline-content:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(106,17,203,.25);
+}
+
+.timeline-item::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #6A11CB;
+    border: 4px solid #fff;
+    z-index: 2;
+}
+
+.timeline-item.left::before{
+    right: -11px;
+}
+
+.timeline-item.right::before{
+    left: -11px;
+}
+
+@media(max-width:768px){
+
+.timeline::after{
+    left:20px;
+}
+
+.timeline-item{
+    width:100%;
+    left:0 !important;
+    padding-left:60px;
+    padding-right:20px;
+    text-align:left;
+}
+
+.timeline-item::before{
+    left:11px !important;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+    <a href="#" class="logo">
+    <div class="tm-logo">TM</div>
+</a>
+
+<a class="navbar-brand" href="#">
+Portfolio
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+<li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+<li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item ms-3">
+    <div id="google_translate_element"></div>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+<!-- HOME -->
+
+<section id="home" class="hero" class="hidden slide-left">
+    
+
+<div class="container">
+
+
+<img src="tanu3.jpeg" alt="Profile">
+
+<h1 class="mt-4">
+Hi, I'm <span>Tarannum Mujawar</span>
+</h1>
+
+<h3>Diploma Computer Engineering Student</h3>
+
+<p class="lead">
+Passionate Web Developer | Programmer | Future Software Engineer
+</p>
+
+
+<div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+
+    <a href="#about" class="btn btn-custom">
+        Explore Portfolio
+    </a>
+
+    <a href="#contact" class="btn btn-custom">
+        <i class="bi bi-briefcase-fill"></i> contact Me
+    </a>
+
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section id="about" class="hidden slide-right">
+   
+    <div class="container">
+       
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-card">
+            <p>
+                I am <span class="highlight">Tarannum Mujawar</span>, a Diploma Computer Engineering student with a strong interest in technology, programming, and web development. I am passionate about learning new skills and creating innovative digital solutions that solve real-world problems.
+
+                <br><br>
+
+                I have knowledge of <span class="skill">HTML</span>,
+                <span class="skill">CSS</span>,
+                <span class="skill">Bootstrap</span>,
+                <span class="skill">JavaScript</span>,
+                <span class="skill">Python</span>,
+                <span class="skill">C Programming</span>, and
+                <span class="skill">MySQL</span>.
+
+                I enjoy designing responsive and user-friendly websites and continuously improving my technical skills through projects, certifications, and practical learning.
+
+                <br><br>
+
+                As a dedicated and enthusiastic learner, I am always eager to explore emerging technologies and expand my knowledge in software development. My goal is to build a successful career in the IT industry and contribute to the development of impactful and innovative solutions.
+            </p>
+        </div>
+
+    </div>
+    </section>
+<style>
+
+/* About Section */
+#about{
+    padding:80px 20px;
+    background: linear-gradient(135deg,#fdf4ff,#f3e8ff,#ede9fe);
+}
+
+/* Title */
+.title{
+    text-align:center;
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:40px;
+    color:#6d28d9;
+    position:relative;
+    display:inline-block;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Underline */
+.title::after{
+    content:"";
+    position:absolute;
+    width:70%;
+    height:4px;
+   
+    left:15%;
+    bottom:-10px;
+    border-radius:10px;
+}
+
+/* Glass Card */
+.about-card{
+    max-width:950px;
+    margin:auto;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(15px);
+    border:2px solid rgba(255,255,255,0.4);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 8px 30px rgba(139,92,246,0.2);
+    transition:0.4s;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(139,92,246,0.3);
+}
+
+/* Text */
+.about-card p{
+    color:#4b5563;
+    font-size:18px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+/* Highlight Name */
+.highlight{
+    color:#7c3aed;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+/* Skills */
+.skill{
+    color:#ec4899;
+    font-weight:600;
+}
+
+</style>
+
+<!-- Statistics Section -->
+<section id="stats">
+
+    <h2 class="section-title">My Statistics</h2>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h1>10+</h1>
+            <p>Projects</p>
+        </div>
+
+        <div class="stat-card">
+            <h1>8+</h1>
+            <p>Certificates</p>
+        </div>
+
+        <div class="stat-card">
+            <h1>5+</h1>
+            <p>Achievements</p>
+        </div>
+
+        <div class="stat-card">
+            <h1>2+</h1>
+            <p>Programming Languages</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section id="skills" class="hidden slide-left">
+   
+    <div class="container">
+         
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-box">
+
+            <!-- HTML -->
+            <div class="skill">
+                <div class="skill-info">
+                    <span>🌐 HTML</span>
+                    <span>95%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress html">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill">
+                <div class="skill-info">
+                    <span>🎨 CSS</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress css">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="skill">
+                <div class="skill-info">
+                    <span>🅱 Bootstrap</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress bootstrap">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill">
+                <div class="skill-info">
+                    <span>⚡ JavaScript</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress js">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python -->
+            <div class="skill">
+                <div class="skill-info">
+                    <span>🐍 Python</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress python">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MySQL -->
+            <div class="skill">
+                <div class="skill-info">
+                    <span>🗄 MySQL</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress mysql">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<style>
+
+/* Section Background */
+
+
+/* Title */
+.section-title{
+    text-align:center;
+    font-size:45px;
+    font-weight:700;
+    color:#6a11cb;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    width:120px;
+    height:5px;
+    background:linear-gradient(to right,#ff4fd8,#6a11cb);
+    position:absolute;
+    bottom:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:20px;
+}
+
+/* Glass Card */
+.skills-box{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* Skill */
+.skill{
+    margin-bottom:30px;
+}
+
+.skill-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    font-size:18px;
+    font-weight:600;
+    color:#333;
+}
+
+/* Progress Bar Background */
+.progress-bar{
+    width:100%;
+    height:18px;
+    background:rgba(255,255,255,0.6);
+    border-radius:50px;
+    overflow:hidden;
+}
+
+/* Common Progress Style */
+.progress{
+    height:100%;
+    width:0;
+    border-radius:50px;
+    position:relative;
+    background:linear-gradient(
+        90deg,
+        #ff4fd8,
+        #d946ef,
+        #8b5cf6,
+        #6a11cb
+    );
+    box-shadow:
+        0 0 15px rgba(255,79,216,.7),
+        0 0 25px rgba(106,17,203,.5);
+}
+
+/* Moving Glow Ball */
+.progress span{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#ff4fd8;
+    box-shadow:
+        0 0 10px #ff4fd8,
+        0 0 20px #ff4fd8,
+        0 0 30px #6a11cb;
+}
+
+/* Shine Effect */
+.progress::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100px;
+    width:80px;
+    height:100%;
+    background:rgba(255,255,255,.5);
+    transform:skewX(-25deg);
+    animation:shine 3s infinite;
+}
+
+@keyframes shine{
+    100%{
+        left:120%;
+    }
+}
+
+/* Animations */
+.html{
+    animation:html-fill 3s ease forwards;
+}
+@keyframes html-fill{
+    from{width:0;}
+    to{width:95%;}
+}
+
+.css{
+    animation:css-fill 3s ease forwards;
+}
+@keyframes css-fill{
+    from{width:0;}
+    to{width:90%;}
+}
+
+.bootstrap{
+    animation:bootstrap-fill 3s ease forwards;
+}
+@keyframes bootstrap-fill{
+    from{width:0;}
+    to{width:85%;}
+}
+
+.js{
+    animation:js-fill 3s ease forwards;
+}
+@keyframes js-fill{
+    from{width:0;}
+    to{width:75%;}
+}
+
+.python{
+    animation:python-fill 3s ease forwards;
+}
+@keyframes python-fill{
+    from{width:0;}
+    to{width:80%;}
+}
+
+.mysql{
+    animation:mysql-fill 3s ease forwards;
+}
+@keyframes mysql-fill{
+    from{width:0;}
+    to{width:70%;}
+}
+
+/* Hover Effect */
+.skill:hover .progress{
+    filter:brightness(1.15);
+    transition:.4s;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .section-title{
+        font-size:35px;
+    }
+
+    .skills-box{
+        padding:25px;
+    }
+}
+</style>
+
+<section id="journey" class="py-5 hidden slide-left">
+ <h2 class="section-title">My Coding Journey</h2>
+ <div class="timeline">
+    <div class="timeline-item left">
+        
+        <div class="timeline-content">
+            <h4>2024</h4>
+            <p>Started Diploma in Computer Engineering and learned programming fundamentals.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-content">
+            <h4>2025</h4>
+            <p>Learned C, C++, Java, SQL and improved problem-solving skills.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item left">
+        <div class="timeline-content">
+            <h4>2026</h4>
+            <p>Built mini projects, earned certifications and participated in competitions.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item right">
+        <div class="timeline-content">
+            <h4>2027</h4>
+            <p> In future Developed my personal portfolio website using HTML, CSS, Bootstrap and JavaScript.</p>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- Education Section -->
+
+<section id="education" class="py-5" class="hidden">
+
+<div class="container">
+
+<h2 class="section-title">
+Education
+</h2>
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<!-- Diploma -->
+
+<div class="card shadow border-0 mb-4">
+    <div class="card-body">
+
+        <h4 class="fw-bold text-primary">
+            Diploma in Computer Engineering
+        </h4>
+
+        <h6 class="text-muted">
+            Shivaji Polytechnic college, sangola
+        </h6>
+
+        <p class="mb-1">
+            <strong>Duration:</strong> 2024 - Present
+        </p>
+
+        <p class="mb-1">
+            <strong>Current Semester:</strong> 5th Semester
+        </p>
+
+        <p class="mb-0">
+            <strong>Last Sem Percentage:</strong> 88%
+        </p>
+
+    </div>
+</div>
+
+<!-- SSC -->
+
+<div class="card shadow border-0">
+    <div class="card-body">
+
+        <h4 class="fw-bold text-success">
+            Secondary School Certificate (SSC)
+        </h4>
+
+        <h6 class="text-muted">
+            Dnyandeep Vidyalaya Sangola
+        </h6>
+
+        <p class="mb-1">
+            <strong>Year of Passing:</strong> 2024
+        </p>
+
+        <p class="mb-0">
+            <strong>Percentage:</strong> 81%
+        </p>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<!-- ================= PROJECTS SECTION ================= -->
+
+<section id="projects" class="py-5 hidden slide-right">
+
+<div class="container">
+    <div class="text-center mb-5">
+        <h2 class="section-title">My Projects</h2>
+        <p class="text-muted mb-4">
+            Some projects developed during my Diploma in Computer Engineering.
+        </p>
+    </div>
+<a href="Index.html" class="btn btn-primary"></a>
+    <div class="row g-4">
+
+        <!-- Project 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card project-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800"
+                     class="card-img-top"
+                     alt="Portfolio Website">
+
+                <div class="card-body">
+
+                    <h4 class="card-title">
+                        Portfolio Website
+                    </h4>
+
+                    <p class="card-text">
+                        A responsive personal portfolio website designed
+                        using HTML, CSS and Bootstrap.
+                    </p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-danger">HTML</span>
+                        <span class="badge bg-primary">CSS</span>
+                        <span class="badge bg-success">Bootstrap</span>
+                    </div>
+
+                    <a href="Index.html" class="btn btn-primary btn-sm">
+                        Live Demo
+                    </a>
+
+                    <a href="#" class="btn btn-outline-primary btn-sm">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card project-card h-100">
+
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+                     class="card-img-top"
+                     alt="Student Management">
+
+                <div class="card-body">
+
+                    <h4 class="card-title">
+                       Form Registration
+                    </h4>
+
+                    <p class="card-text">
+                        A system to manage student records,
+                        attendance and academic information.
+                    </p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-warning text-dark">Java</span>
+                        <span class="badge bg-secondary">MySQL</span>
+                    </div>
+
+                    <a href="Patient_Regi_Form.html" class="btn btn-primary btn-sm">
+                        Live Demo
+                    </a>
+
+                    <a href="#" class="btn btn-outline-primary btn-sm">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card project-card h-100">
+
+                <img src="data:image/jpeg;base64,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">
+
+                <div class="card-body">
+
+                    <h4 class="card-title">
+                     Calculator
+                    </h4>
+
+                    <p class="card-text">
+                      Clean UI calculator built with vanilla JS & CSS grid.
+                    </p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-danger">HTML</span>
+                        <span class="badge bg-primary">CSS</span>
+                        <span class="badge bg-success">Bootstrap</span>
+                    </div>
+
+                    <a href="cal.html" class="btn btn-primary btn-sm">
+                        Live Demo
+                    </a>
+
+                    <a href="#" class="btn btn-outline-primary btn-sm">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ================= CERTIFICATIONS SECTION ================= -->
+
+<section id="certifications" class="py-5 bg-light" class="hidden slide-left" >
+<div class="container">
+  <div class="text-center mb-5">
+    <h2 class="section-title">
+        Certifications
+    </h2>
+
+    <p class="text-muted mt-4">
+        Professional courses and certifications completed during my academic journey.
+    </p>
+</div>
+
+    <div class="row g-4">
+
+        <!-- Certificate 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card certificate-card h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-award-fill certificate-icon"></i>
+
+                    <h4 class="mt-3">
+                        AI & Machine learning
+                    </h4>
+
+                    <p class="text-muted">
+                        Great Learning
+                    </p>
+
+                    <p>
+                        Learned HTML, Artificial Intellegence, and responsive Machine Learning design.
+                    </p>
+
+                    <span class="badge bg-primary">
+                        2025
+                    </span>
+
+                    <div class="mt-3">
+                        <a href="AI.jpeg" class="btn btn-outline-primary">
+                            View Certificate
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card certificate-card h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-award-fill certificate-icon"></i>
+
+                    <h4 class="mt-3">
+                        C Programming
+                    </h4>
+
+                    <p class="text-muted">
+                        Infosys Springboard
+                    </p>
+
+                    <p>
+                        Fundamentals of C programming and C concepts.
+                    </p>
+
+                    <span class="badge bg-success">
+                        2025
+                    </span>
+
+                    <div class="mt-3">
+                        <a href="C programming.jpeg" class="btn btn-outline-success">
+                            View Certificate
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card certificate-card h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-award-fill certificate-icon"></i>
+
+                    <h4 class="mt-3">
+                        Quiz Compitition
+                    </h4>
+
+                    <p class="text-muted">
+                        Coursera
+                    </p>
+
+                    <p>
+                        participited into state level Quizz compitition.
+                    </p>
+
+                    <span class="badge bg-warning text-dark">
+                        2024
+                    </span>
+
+                    <div class="mt-3">
+                        <a href="Quiz.jpeg" class="btn btn-outline-warning">
+                            View Certificate
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS SECTION -->
+
+<section id="achievements" class="py-5" class="hidden slide-right">
+
+<div class="container">
+
+<h2 class="section-title">
+Achievements
+</h2>
+
+<div class="row g-4">
+
+    <!-- Achievement 1 -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card glass achievement-card text-center h-100">
+
+            <div class="card-body">
+
+                <i class="bi bi-trophy-fill achievement-icon"></i>
+
+                <h4 class="mt-3">
+                    Blind C
+                </h4>
+
+                <p>
+                    Participated in Blind C Competition, showcasing proficiency in C programming, problem-solving, and coding accuracy under time constraints.
+                </p>
+
+                <span class="badge bg-primary">
+                    2025
+                </span>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card glass achievement-card text-center h-100">
+
+            <div class="card-body">
+
+                <i class="bi bi-award-fill achievement-icon"></i>
+
+                <h4 class="mt-3">
+                    State Level Quiz Competition
+                </h4>
+
+                <p>
+                    Participated in State Level Quiz Competition and enhanced technical knowledge.
+                </p>
+
+                <span class="badge bg-success">
+                    2024
+                </span>
+              </div>
+
+        </div>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card glass achievement-card text-center h-100">
+
+            <div class="card-body">
+
+                <i class="bi bi-code-slash achievement-icon"></i>
+
+                <h4 class="mt-3">
+                  Chess Compitition
+                </h4>
+
+                <p>
+                    Successfully applied analytical and problem-solving abilities while competing in a challenging and competitive environment.
+                </p>
+
+                <span class="badge bg-warning text-dark">
+                    2025
+                </span>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
+
+<section id="resume"  class="hidden slide-left">
+    
+<div class="container">
+<h2 class="section-title">Resume</h2>
+
+<div class="glass text-center">
+
+<p style="color:#6A11CB;">Download my latest resume below.</p>
+
+<a href="Resume.html" class="btn btn-custom">
+Download Resume
+</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="py-5 hidden slide-right">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<form>
+
+<input
+type="text"
+class="form-control mb-3"
+placeholder="Name">
+
+<input
+type="email"
+class="form-control mb-3"
+placeholder="Email">
+
+<textarea
+rows="5"
+class="form-control mb-3"
+placeholder="Message"></textarea>
+<!-- Captcha -->
+<div class="mb-3">
+    <label class="form-label">
+        Verify: <span id="captcha">7 + 3 = ?</span>
+    </label>
+
+    <input
+    type="text"
+    id="captchaInput"
+    class="form-control"
+    placeholder="Enter Answer">
+</div>
+
+<button
+type="button"
+class="btn btn-primary"
+onclick="checkCaptcha()">
+Send Message
+</button>
+
+
+</form>
+
+</div>
+
+<div class="col-md-6">
+
+<h5>Email</h5>
+<p>yourmail@gmail.com</p>
+
+<h5>Phone</h5>
+<p>+91 XXXXX XXXXX</p>
+
+<h5>Location</h5>
+<p>Maharashtra, India</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Attractive Google Translator -->
+
+<div class="translator-box">
+    <div id="google_translate_element"></div>
+</div>
+
+<style>
+.translator-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px 0;
+}
+
+#google_translate_element{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    padding:12px 20px;
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.15),
+        0 0 20px rgba(255,110,196,0.3);
+    transition:0.4s ease;
+}
+
+#google_translate_element:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.25),
+        0 0 25px rgba(120,115,245,0.5);
+}
+
+.goog-te-gadget{
+    font-size:0 !important;
+}
+
+.goog-te-gadget .goog-te-combo{
+    background:linear-gradient(135deg,#ff6ec4,#7873f5);
+    color:white;
+    border:none;
+    border-radius:30px;
+    padding:12px 22px;
+    font-size:15px !important;
+    font-weight:700;
+    cursor:pointer;
+    outline:none;
+    letter-spacing:0.5px;
+    box-shadow:0 4px 15px rgba(120,115,245,0.4);
+}
+
+.goog-te-gadget .goog-te-combo:hover{
+    transform:scale(1.05);
+}
+
+.goog-logo-link,
+.goog-te-gadget span{
+    display:none !important;
+}
+
+.goog-te-banner-frame.skiptranslate{
+    display:none !important;
+}
+
+body{
+    top:0 !important;
+}
+</style>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+    {
+        pageLanguage:'en',
+        includedLanguages:'en,hi,mr',
+        layout:google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+    );
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- WhatsApp -->
+<a href="https://wa.me/9960818086" class="whatsapp-btn" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Top-Bottom Arrow Button -->
+<button id="scrollBtn" onclick="scrollPage()">
+    <i id="scrollIcon" class="bi bi-arrow-down-circle-fill"></i>
+</button>
+<script>
+
+let isBottom = false;
+
+window.addEventListener("scroll", function(){
+
+    let icon = document.getElementById("scrollIcon");
+
+    let scrollPosition = window.innerHeight + window.pageYOffset;
+    let pageHeight = document.body.offsetHeight;
+
+    if(scrollPosition >= pageHeight - 50){
+
+        icon.className = "bi bi-arrow-up-circle-fill";
+        isBottom = true;
+
+    }else{
+
+        icon.className = "bi bi-arrow-down-circle-fill";
+        isBottom = false;
+    }
+});
+
+function scrollPage(){
+
+    if(isBottom){
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }else{
+
+        window.scrollTo({
+            top:document.body.scrollHeight,
+            behavior:"smooth"
+        });
+    }
+}
+
+</script>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+
+hiddenElements.forEach((el)=>observer.observe(el));
+</script>
+
+<script>
+function checkCaptcha(){
+
+    let answer =
+    document.getElementById("captchaInput").value;
+
+    if(answer == "10"){
+        alert("Message Sent Successfully ✅");
+    }
+    else{
+        alert("Wrong Captcha ❌");
+    }
+}
+function checkCaptcha(){
+
+    let answer = document.getElementById("captchaInput").value;
+
+    if(answer == "10"){
+
+        alert("Message Sent Successfully ✅");
+
+        window.open(
+            "https://wa.me/9960818086",
+            "_blank"
+        );
+
+    }else{
+
+        alert("Wrong Captcha ❌");
+    }
+}
+</script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- FOOTER -->
+<footer class="premium-footer">
+
+    <h4>Let's Connect ✨</h4>
+
+    <div class="footer-icons">
+
+       <a href="https://github.com/tarannum1809" target="_blank" title="GitHub">
+            <i class="bi bi-github"></i>
+        </a>
+
+        <a href="#" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+         <a href="mailto:tarannum1809@gmail.com" title="Gmail">
+            <i class="bi bi-envelope-fill"></i>
+        </a>
+
+
+        <a href="https://wa.me/919960818086" target="_blank" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+
+    </div>
+
+    <p>
+        Made with ❤️ by <strong>Tarannum Mujawar</strong>
+    </p>
+
+    <small>
+        © 2026 All Rights Reserved
+    </small>
+
+</footer>
+
+<style>
+
+.premium-footer{
+    text-align:center;
+    padding:40px 20px;
+    margin-top:60px;
+
+    background:linear-gradient(
+        135deg,
+        #ff6ec4,
+        #b26bff,
+        #7873f5
+    );
+
+    color:white;
+
+    border-radius:30px 30px 0 0;
+
+    box-shadow:
+    0 -10px 30px rgba(120,115,245,0.3);
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* Glow Effect */
+.premium-footer::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.15);
+    border-radius:50%;
+    top:-150px;
+    left:-100px;
+}
+
+.premium-footer::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    bottom:-120px;
+    right:-80px;
+}
+
+.premium-footer h4{
+    font-weight:700;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.footer-icons{
+    margin:25px 0;
+}
+
+.footer-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    width:55px;
+    height:55px;
+
+    margin:0 10px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+
+    border-radius:50%;
+
+    color:white;
+    font-size:24px;
+
+    text-decoration:none;
+
+    transition:all 0.4s ease;
+}
+
+.footer-icons a:hover{
+    transform:
+    translateY(-8px)
+    scale(1.15);
+
+    background:white;
+    color:#7873f5;
+
+    box-shadow:
+    0 0 25px white;
+}
+
+.premium-footer p{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.premium-footer small{
+    opacity:0.9;
+    font-size:14px;
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const navbar = document.querySelector('.navbar-collapse');
+        const bsCollapse = bootstrap.Collapse.getInstance(navbar);
+
+        if (bsCollapse) {
+            bsCollapse.hide();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tarannum Mujawar | Portfolio</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#FFD6E8,#F3D9FF,#E8DDFF);
+overflow-x:hidden;
+}
+
+/*==========================
+NAVBAR
+==========================*/
+
+.navbar{
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.tm-logo{
+width:55px;
+height:55px;
+border-radius:50%;
+background:linear-gradient(135deg,#8B5CF6,#FF4D9D);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:bold;
+color:#fff;
+margin-right:12px;
+transition:.4s;
+}
+
+.tm-logo:hover{
+transform:rotate(360deg);
+}
+
+.logo{
+text-decoration:none;
+}
+
+.navbar-brand{
+color:#6A11CB!important;
+font-weight:700;
+font-size:28px;
+}
+
+.nav-link{
+font-weight:600;
+color:#444!important;
+margin-left:12px;
+position:relative;
+transition:.4s;
+}
+
+.nav-link::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:3px;
+background:#FF4D9D;
+transition:.4s;
+}
+
+.nav-link:hover{
+color:#FF4D9D!important;
+}
+
+.nav-link:hover::after{
+width:100%;
+}
+
+/*==========================
+HOME
+==========================*/
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#FF9AD5,#B784FF,#8EC5FF);
+color:#fff;
+padding-top:90px;
+}
+
+.profile-box{
+display:inline-block;
+padding:10px;
+border-radius:50%;
+background:linear-gradient(45deg,#ff69b4,#8a2be2,#00c6ff);
+box-shadow:
+0 0 20px #ff69b4,
+0 0 40px #8a2be2,
+0 0 60px #00c6ff;
+animation:float 4s ease-in-out infinite;
+}
+
+.profile-box img{
+width:350px;
+height:350px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+transition:.5s;
+}
+
+.profile-box img:hover{
+transform:scale(1.08) rotate(3deg);
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.hero h1{
+font-size:55px;
+font-weight:700;
+margin-top:30px;
+}
+
+.hero p{
+font-size:20px;
+margin-top:15px;
+}
+
+.btn-custom{
+background:#fff;
+color:#6A11CB;
+padding:12px 30px;
+border-radius:40px;
+font-weight:600;
+transition:.4s;
+border:none;
+}
+
+.btn-custom:hover{
+background:#FFE07A;
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+font-weight:700;
+color:#6A11CB;
+margin-bottom:60px;
+position:relative;
+}
+
+.section-title::after{
+content:"";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:-12px;
+width:120px;
+height:5px;
+background:linear-gradient(to right,#FF4D9D,#6A11CB);
+border-radius:20px;
+}
+
+.hidden{
+opacity:0;
+transform:translateY(80px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+/* ================= ABOUT ================= */
+
+#about{
+background:#F8F5FF;
+}
+
+.about-card{
+
+max-width:950px;
+margin:auto;
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(15px);
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.about-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(106,17,203,.25);
+
+}
+
+.about-card p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#444;
+
+text-align:justify;
+
+}
+
+/* ================= STATS ================= */
+
+#stats{
+
+background:#F8F5FF;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.stat-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 35px rgba(106,17,203,.25);
+
+}
+
+.stat-card h1{
+
+font-size:48px;
+
+font-weight:700;
+
+color:#6A11CB;
+
+}
+
+.stat-card p{
+
+font-size:18px;
+
+font-weight:600;
+
+margin-top:10px;
+
+color:#555;
+
+}
+
+/*==============================
+SKILLS
+==============================*/
+
+#skills{
+background:#F8F5FF;
+}
+
+.skills-box{
+max-width:900px;
+margin:auto;
+padding:40px;
+background:white;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.skill{
+margin-bottom:30px;
+}
+
+.skill:last-child{
+margin-bottom:0;
+}
+
+.skill-info{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:18px;
+font-weight:600;
+color:#444;
+}
+
+.progress-bar{
+width:100%;
+height:18px;
+background:#e8e8e8;
+border-radius:50px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+border-radius:50px;
+background:linear-gradient(90deg,#ff4d9d,#8a2be2);
+box-shadow:0 0 12px rgba(138,43,226,.4);
+animation:grow 2s ease forwards;
+}
+
+.html{width:95%;}
+.css{width:90%;}
+.bootstrap{width:90%;}
+.js{width:75%;}
+.python{width:80%;}
+.mysql{width:70%;}
+
+@keyframes grow{
+from{
+width:0;
+}
+}
+
+.skill:hover .progress{
+filter:brightness(1.15);
+}
+
+.skills-box:hover{
+transform:translateY(-5px);
+transition:.4s;
+box-shadow:0 20px 40px rgba(106,17,203,.2);
+}
+
+@media(max-width:768px){
+
+.skills-box{
+padding:25px;
+}
+
+.skill-info{
+font-size:16px;
+}
+
+}
+</style>
+
+</head>
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+
+<a href="#" class="logo d-flex align-items-center">
+
+<div class="tm-logo">
+TM
+</div>
+
+<span class="navbar-brand mb-0">
+Portfolio
+</span>
+
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#education">Education</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projects">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#certifications">Certificates</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#achievements">Achievements</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#resume">Resume</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+<div class="container">
+
+<div class="profile-box">
+
+<img src="tanu3.jpeg" alt="Tarannum Mujawar">
+
+</div>
+
+<h1>
+Hi, I'm
+<br>
+<span style="color:#FFF176;">
+Tarannum Mujawar
+</span>
+</h1>
+
+<h3 class="mt-3">
+Diploma Computer Engineering Student
+</h3>
+
+<p class="lead mt-3">
+
+Passionate Web Developer • Programmer • Future Software Engineer
+
+</p>
+
+<a href="#about" class="btn btn-custom mt-4">
+
+Explore Portfolio
+
+<i class="bi bi-arrow-right-circle ms-2"></i>
+
+</a>
+
+</div>
+
+</section>
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about-card hidden">
+
+<p>
+
+Hello! I'm
+<strong class="text-primary">
+Tarannum Mujawar
+</strong>,
+
+a Diploma Computer Engineering student passionate about technology, programming, and web development.
+
+<br><br>
+
+I enjoy creating modern, responsive websites using
+
+<span class="badge bg-primary">HTML</span>
+
+<span class="badge bg-info text-dark">CSS</span>
+
+<span class="badge bg-success">Bootstrap</span>
+
+<span class="badge bg-warning text-dark">JavaScript</span>
+
+<span class="badge bg-danger">Python</span>
+
+<span class="badge bg-secondary">MySQL</span>
+
+<br><br>
+
+I continuously improve my skills through projects, certifications, and practical learning. My goal is to become a successful Software Engineer and build innovative digital solutions.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section id="stats">
+
+<div class="container">
+
+<h2 class="section-title">
+My Statistics
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card hidden">
+
+<h1>10+</h1>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat-card hidden">
+
+<h1>8+</h1>
+
+<p>Certificates</p>
+
+</div>
+
+<div class="stat-card hidden">
+
+<h1>5+</h1>
+
+<p>Achievements</p>
+
+</div>
+
+<div class="stat-card hidden">
+
+<h1>6+</h1>
+
+<p>Technical Skills</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SKILLS SECTION ================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+My Skills
+</h2>
+
+<div class="skills-box hidden">
+
+<div class="skill">
+
+<div class="skill-info">
+<span>🌐 HTML</span>
+<span>95%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress html"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+<span>🎨 CSS</span>
+<span>90%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress css"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+<span>🅱 Bootstrap</span>
+<span>90%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress bootstrap"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+<span>⚡ JavaScript</span>
+<span>75%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress js"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+<span>🐍 Python</span>
+<span>80%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress python"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-info">
+<span>🗄 MySQL</span>
+<span>70%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress mysql"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+</body>
+</html>
