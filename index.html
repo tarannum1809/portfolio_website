@@ -1975,12 +1975,30 @@ function checkCaptcha(){
 
     if(answer == "10"){
 
-        alert("Message Sent Successfully ✅");
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value; 
 
-        window.open(
-            "https://wa.me/+91 9960818086",
-            "_blank"
-        );
+        let whatsappMessage =
+`✨ *New Portfolio Inquiry* ✨
+
+👤 *Name:* ${name}
+
+📧 *Email:* ${email}
+
+💬 *Message:*
+${message}
+
+━━━━━━━━━━━━━━━━━━
+🌐 Sent from Tarannum's Portfolio Website`;
+
+        let url =
+        "https://wa.me/919960818086?text=" +
+        encodeURIComponent(whatsappMessage);
+
+        alert("Message Ready ✅");
+
+        window.open(url, "_blank");
 
     }else{
 
