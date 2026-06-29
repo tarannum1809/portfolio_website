@@ -760,6 +760,29 @@ backdrop-filter:blur(10px);
 }
 
 }
+
+    /* ===== Section Heading Animation ===== */
+.section-title{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.section-title.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    .section-title{
+    opacity:0;
+    transform:translateY(60px) scale(0.8);
+    transition:1s ease;
+}
+
+.section-title.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
 </style>
 </head>
 
@@ -2165,6 +2188,22 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             bsCollapse.hide();
         }
     });
+});
+
+    const headings = document.querySelectorAll(".section-title");
+
+const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},{
+    threshold:0.3
+});
+
+headings.forEach((heading)=>{
+    headingObserver.observe(heading);
 });
 </script>
 
