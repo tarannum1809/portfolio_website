@@ -1458,14 +1458,16 @@ Education
                         <span class="badge bg-secondary">MySQL</span>
                     </div>
 
-                    <a href="Patient_Regi_Form.html" class="btn btn-primary btn-sm">
-                        Live Demo
-                    </a>
+              
 
                     <a href="#" class="btn btn-outline-primary btn-sm">
                         GitHub
                     </a>
-
+     <button class="btn btn-outline-primary btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#formModal">
+    View Details
+</button>
                 </div>
 
             </div>
@@ -1493,13 +1495,14 @@ Education
                         <span class="badge bg-success">Bootstrap</span>
                     </div>
 
-                    <a href="cal.html" class="btn btn-primary btn-sm">
-                        Live Demo
-                    </a>
-
                     <a href="#" class="btn btn-outline-primary btn-sm">
                         GitHub
                     </a>
+                            <button class="btn btn-outline-primary btn-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#calculatorModal">
+    View Details
+</button>
 
                 </div>
 
@@ -2317,6 +2320,38 @@ headings.forEach((heading)=>{
                     Close
                 </button>
 
+            </div>
+
+        </div>
+    </div>
+</div>
+    <div class="modal fade" id="formModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Form Registration</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <iframe
+                    src="Patient_Regi_Form.html"
+                    style="width:100%; height:85vh; border:none;">
+                </iframe>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
             </div>
 
         </div>
